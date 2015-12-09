@@ -1,0 +1,112 @@
+#!/bin/bash
+
+#################################################################
+# Distributed Theatre Sound System
+# EWU Senior Project Team 6 2014-2015
+# Jared Hutton, Colton Prettyman, Eric Meldrum, Andrew Swalmsley
+#################################################################
+
+NAME="broadcastlistener"
+DESC="$NAME for the Distributed Theatre Sound System"
+
+# Make sure only root can run our script
+if [ "$(id -u)" != "0" ]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
+
+# catch CTRL-C and CTRL-Z for cleanup purposes
+trap do_cleanup SIGINT SIGHUP SIGTERM SIGQUIT
+
+do_cleanup()
+{
+    echo "Force Kill caught, cleaning up $NAME..."
+    do_stop
+    exit 0
+}
+
+do_start()
+{
+    if [[ $(ps aux | grep mono | grep -c '$NAME.exe') != 0 ]]; then
+	echo "$NAME already running"
+    fi
+    echo "Starting $NAME..."
+    
+    # start the broadcastlistener
+    cd /usr/local/lib/dtss/$NAME
+    mono "$NAME.exe"
+    if [[ $? == 0 ]]; then
+	echo "$NAME exit...[OK]"
+    else
+	    echo "$NAME exit...[ERROR]"
+    fi
+}
+
+do_stop()
+{
+    while read line
+    do
+	echo -n "killing $NAME PID $line..."
+	sudo kill $line
+	if [[ $? == 0 ]]; then
+	    echo "[Ok]"
+	else
+	    echo "[Failed]"
+	fi
+    done < <(ps aux | grep mono | grep ''$NAME'.exe' | awk '{print $2}')
+  
+}
+
+case "$1" in
+    force-start)
+	do_start
+	;;
+    start|restart|force-reload)
+	do_stop
+	do_start
+	;;
+    stop)
+	do_stop
+	;;
+    *)
+	echo $DESC >&2
+	echo "Usage: $NAME {start|stop|restart|force-reload|force-start}" >&2
+	;;
+esac
+
+exit 0
+
+
+
+
+
+
+
+
+# help
+if [[ $# == 0 || $1 == "--help" || $1 != "kill"]]; then
+    echo "Usage:"
+    echo " broadcastlistener    [options]"
+    echo 
+    echo " --help               this menu"
+    echo " start                starts the broadcastlistener"
+    echo " kill                 stops all instances of the broadcastlistener"
+    exit 0
+fi
+
+# kill
+if [[ $1 == "kill" ]]; then
+
+    while read line
+    do
+	echo "killing "$line
+	kill $line
+    done < <(ps -aux | grep mono | grep 'broadcastlistener.exe\|dtssmanager.exe' | awk '{print $2}')
+    
+    exit 0
+fi
+
+# start
+cd /usr/local/lib/dtss/broadcastlistener
+
+exec mono "broadcastlistener.exe" "$@"

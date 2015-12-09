@@ -1,0 +1,195 @@
+
+
+System.ArgumentOutOfRangeException: startIndex + length > this.length
+Parameter name: length
+  at System.String.Substring (Int32 startIndex, Int32 length) [0x00000] in <filename unknown>:0 
+  at Network.File.readNodeFile () [0x00037] in /home/jared/Network/Network/File.cs:24 
+
+System.ArgumentOutOfRangeException: startIndex + length > this.length
+Parameter name: length
+  at System.String.Substring (Int32 startIndex, Int32 length) [0x00000] in <filename unknown>:0 
+  at Network.File.readNodeFile () [0x00041] in /home/jared/Network/Network/File.cs:25 
+
+System.ArgumentOutOfRangeException: startIndex + length > this.length
+Parameter name: length
+  at System.String.Substring (Int32 startIndex, Int32 length) [0x00000] in <filename unknown>:0 
+  at Network.File.readNodeFile () [0x00041] in /home/jared/Network/Network/File.cs:25 
+
+System.ArgumentOutOfRangeException: startIndex + length > this.length
+Parameter name: length
+  at System.String.Substring (Int32 startIndex, Int32 length) [0x00000] in <filename unknown>:0 
+  at Network.File.readNodeFile () [0x00041] in /home/jared/Network/Network/File.cs:25 
+
+System.ArgumentOutOfRangeException: Cannot be negative.
+Parameter name: length
+  at System.String.Substring (Int32 startIndex, Int32 length) [0x00000] in <filename unknown>:0 
+  at Network.File.readNodeFile () [0x00041] in /home/jared/Network/Network/File.cs:25 
+
+System.ArgumentOutOfRangeException: Cannot be negative.
+Parameter name: length
+  at System.String.Substring (Int32 startIndex, Int32 length) [0x00000] in <filename unknown>:0 
+  at Network.File.readNodeFile () [0x00041] in /home/jared/Network/Network/File.cs:25 
+
+System.ArgumentOutOfRangeException: Cannot be negative.
+Parameter name: length
+  at System.String.Substring (Int32 startIndex, Int32 length) [0x00000] in <filename unknown>:0 
+  at Network.FileMethods.readNodeFile () [0x0002f] in /home/jared/Network/Network/FileMethods.cs:26 
+
+System.ArgumentOutOfRangeException: Cannot be negative.
+Parameter name: length
+  at System.String.Substring (Int32 startIndex, Int32 length) [0x00000] in <filename unknown>:0 
+  at Network.FileMethods.readNodeFile () [0x0002f] in /home/jared/Network/Network/FileMethods.cs:26 
+
+System.ArgumentOutOfRangeException: Cannot be negative.
+Parameter name: length
+  at System.String.Substring (Int32 startIndex, Int32 length) [0x00000] in <filename unknown>:0 
+  at Network.FileMethods.readNodeFile () [0x0002f] in /home/jared/Network/Network/FileMethods.cs:26 
+
+System.OutOfMemoryException: Out of memory
+  at <0x00000> <unknown method>
+  at System.Collections.ArrayList.EnsureCapacity (Int32 count) [0x00000] in <filename unknown>:0 
+  at System.Collections.ArrayList.Add (System.Object value) [0x00000] in <filename unknown>:0 
+  at Network.FileMethods.readProduction (System.String filename) [0x00080] in /home/jared/Network/Network/FileMethods.cs:185 
+
+System.IO.FileNotFoundException: Could not find file "/home/jared/Network/Network/productions/undefined".
+File name: '/home/jared/Network/Network/productions/undefined'
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at Network.FileMethods.readProduction (System.String filename) [0x0001f] in /home/jared/Network/Network/FileMethods.cs:169 
+
+System.IO.FileNotFoundException: Could not find file "/home/jared/Network/Network/productions/undefined".
+File name: '/home/jared/Network/Network/productions/undefined'
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at Network.FileMethods.readProduction (System.String filename) [0x0001f] in /home/jared/Network/Network/FileMethods.cs:169 
+
+System.IO.FileNotFoundException: Could not find file "/home/jared/Network/Network/productions/undefined".
+File name: '/home/jared/Network/Network/productions/undefined'
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at Network.FileMethods.readProduction (System.String filename) [0x0001f] in /home/jared/Network/Network/FileMethods.cs:169 
+
+System.IO.FileNotFoundException: Could not find file "/home/jared/Network/Network/productions/undefined".
+File name: '/home/jared/Network/Network/productions/undefined'
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at Network.FileMethods.readProduction (System.String filename) [0x0001f] in /home/jared/Network/Network/FileMethods.cs:169 
+
+System.IO.FileNotFoundException: Could not find file "/home/jared/Network/Network/productions/undefined".
+File name: '/home/jared/Network/Network/productions/undefined'
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at Network.FileMethods.readProduction (System.String filename) [0x0001f] in /home/jared/Network/Network/FileMethods.cs:169 
+
+System.IO.FileNotFoundException: Could not find file "/home/jared/Network/Network/productions/undefined".
+File name: '/home/jared/Network/Network/productions/undefined'
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at Network.FileMethods.readProduction (System.String filename) [0x0001f] in /home/jared/Network/Network/FileMethods.cs:169 
+
+System.IO.FileNotFoundException: Could not find file "/home/jared/Network/Network/productions/undefined".
+File name: '/home/jared/Network/Network/productions/undefined'
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at Network.FileMethods.readProduction (System.String filename) [0x0001f] in /home/jared/Network/Network/FileMethods.cs:169 
+
+System.IO.FileNotFoundException: Could not find file "/home/jared/Network/Network/productions/undefined".
+File name: '/home/jared/Network/Network/productions/undefined'
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at Network.FileMethods.readProduction (System.String filename) [0x0001f] in /home/jared/Network/Network/FileMethods.cs:169 
+
+System.IO.FileNotFoundException: Could not find file "/home/jared/Network/Network/productions/undefined".
+File name: '/home/jared/Network/Network/productions/undefined'
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at Network.FileMethods.readProduction (System.String filename) [0x0001f] in /home/jared/Network/Network/FileMethods.cs:169 
+
+System.IO.FileNotFoundException: Could not find file "/home/jared/Network/Network/productions/undefined".
+File name: '/home/jared/Network/Network/productions/undefined'
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at Network.FileMethods.readProduction (System.String filename) [0x0001f] in /home/jared/Network/Network/FileMethods.cs:169 
+
+System.IO.FileNotFoundException: Could not find file "/home/jared/Network/Network/productions/undefined".
+File name: '/home/jared/Network/Network/productions/undefined'
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at Network.FileMethods.readProduction (System.String filename) [0x0001f] in /home/jared/Network/Network/FileMethods.cs:169 
+
+System.IO.FileNotFoundException: Could not find file "/home/jared/Network/Network/productions/undefined".
+File name: '/home/jared/Network/Network/productions/undefined'
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at Network.FileMethods.readProduction (System.String filename) [0x0001f] in /home/jared/Network/Network/FileMethods.cs:169 
+
+System.IO.FileNotFoundException: Could not find file "/home/jared/Network/Network/productions/undefined".
+File name: '/home/jared/Network/Network/productions/undefined'
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at Network.FileMethods.readProduction (System.String filename) [0x0001f] in /home/jared/Network/Network/FileMethods.cs:169 

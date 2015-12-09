@@ -1,0 +1,77 @@
+#!/bin/bash
+
+### BEGIN INIT INFO
+# Provides:          dtssmanager
+# Required-Start:    $ALL
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Manager for the Distributed Theatre Sound System
+# Description:       This script can start, stop, kill, force-reload
+#                    the Distributed Theatre Sound System
+### END INIT INFO
+
+# Author: Andrew Swalmsley <swalmsley17@eagles.ewu.edu>
+# Author: Colton Prettyman <konakidvw@gmail.com>
+# Author: Eric Meldrum <ericmeldrum@hotmail.com>
+# Author: Jared Hutton <jhutton@eagles.ewu.edu>
+
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+DESC="dtssmanager startup"
+NAME=dtssmanagerinit
+SCRIPTNAME=/etc/init.d/$NAME
+
+# Make sure only root can run our script
+if [ "$(id -u)" != "0" ]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
+
+do_start()
+{
+    if [[ $(ps aux | grep mono | grep -c 'dtssmanager.exe') != 0 ]]; then
+	echo "dtssmanager already running"
+    fi
+    echo "Starting dtssmanager..."
+    
+    # start the dtssmanager
+    cd /usr/local/lib/dtss/
+    mono "dtssmanager.exe"
+    if [[ $? == 0 ]]; then
+	echo "[OK]"
+    else
+	echo "[ERROR]"
+    fi
+}
+
+do_stop()
+{
+    while read line
+    do
+	echo -n "killing PID $line..."
+	sudo kill $line
+	if [[ $? == 0 ]]; then
+	    echo "[Ok]"
+	    else
+	    echo "[Failed]"
+	fi
+    done < <(ps aux | grep mono | grep 'audiocommandlistener.exe\|dtssmanager.exe\|broadcastlistener.exe\|xsp4.exe' | awk '{print $2}')
+}
+
+case "$1" in
+    force-start)
+	do_start
+	;;
+    start|restart|force-reload)
+	do_stop
+	do_start
+	;;
+    stop)
+	do_stop
+	;;
+    *)
+	echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload|force-start}" >&2
+	;;
+esac
+
+exit 0
